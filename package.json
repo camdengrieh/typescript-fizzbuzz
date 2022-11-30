@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "tsc fizzbuzz.ts && node fizzbuzz.js",
+    "test": "node ./node_modules/mocha/bin/mocha"
+  },
+  "dependencies": {
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.11.9",
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "ts-mockito": "^2.6.1",
+    "typescript-ioc": "^3.2.2"
+  }
+}
