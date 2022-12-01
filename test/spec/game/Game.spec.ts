@@ -5,6 +5,7 @@ import BuzzRule from '../../../src/rules/BuzzRule';
 import FizzRule from '../../../src/rules/FizzRule';
 import FizzBuzzRule from '../../../src/rules/FizzBuzzRule'
 import RuleStorage from '../../../src/storage/RulesStorage'
+import RuleInterface from '../../../src/interfaces/RuleInterfaces';
 
 
 // TODO 
@@ -16,8 +17,8 @@ describe('Testing Game Controller - When a number is passed into start()...', ()
     let mockedBuzz: BuzzRule = mock(BuzzRule);
     let mockedFizzBuzz: FizzBuzzRule = mock(FizzBuzzRule);
     let mockedStorage: RuleStorage = mock(RuleStorage);
-
-    let mockedGame: Game = new Game(instance(mockedStorage));
+    let rules: RuleInterface[] = [];
+    let mockedGame: Game = new Game(rules);
 
   
 

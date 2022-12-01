@@ -1,15 +1,8 @@
 import RuleStorage from "../storage/RulesStorage";
 import { Inject } from "typescript-ioc";
 
-export default class Game {
-    @Inject
-    private ruleStorage: RuleStorage;
+export default class Game extends RuleStorage{
 
-    constructor (@Inject _ruleStorage: RuleStorage) {
-      this.ruleStorage = _ruleStorage;
-    }
-  
-  
     start(number: number) {
       const output: string[] = [];
   
@@ -21,7 +14,7 @@ export default class Game {
     }
   
     getRuleText(number: number): string {
-      for (const rule of this.ruleStorage.rules) {
+      for (const rule of this.rules) {
         if (rule.divisible(number)) {
           return rule.getRuleText();
         }
