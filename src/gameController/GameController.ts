@@ -1,8 +1,10 @@
 import RuleStorage from "../storage/RulesStorage";
-import { Inject } from "typescript-ioc";
+import { Inject, Singleton } from "typescript-ioc";
+import RuleInterface from "../interfaces/RuleInterfaces";
 
+@Singleton
 export default class Game extends RuleStorage{
-
+    @Inject rules: RuleInterface[]
     start(number: number) {
       const output: string[] = [];
   
