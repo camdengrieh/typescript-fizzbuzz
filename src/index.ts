@@ -4,8 +4,12 @@ import FizzRule from "./rules/FizzRule";
 import Game from "./gameController/GameController";
 import RuleInterface from "./interfaces/RuleInterfaces";
 
-  let rules: RuleInterface[] = [new BuzzRule,new FizzRule,new FizzBuzzRule]
-  const game = new Game(rules);
+  let fizzRule: RuleInterface = new FizzRule;
+  let buzzRule: RuleInterface = new BuzzRule;
+  let fizzBuzzRule: RuleInterface = new FizzBuzzRule;
+  let rules: RuleInterface[] = [fizzBuzzRule, fizzRule,buzzRule];
+
+  const game = new Game(rules)
 
   const result = game.start(100);
   

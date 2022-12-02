@@ -1,13 +1,15 @@
 {
   "scripts": {
-    "start": "tsc fizzbuzz.ts && node fizzbuzz.js",
+    "start": "tsc ./src/index.ts && node ./src/index.js",
     "test": "node ./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
+    "@angular/core": "^15.0.2",
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.11.9",
     "chai": "^4.3.7",
     "mocha": "^10.1.0",
+    "ts-loader": "^9.4.2",
     "ts-mockito": "^2.6.1",
     "typescript-ioc": "^3.2.2"
   }
