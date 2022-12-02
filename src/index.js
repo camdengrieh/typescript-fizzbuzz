@@ -7,7 +7,8 @@ var GameController_1 = require("./gameController/GameController");
 var fizzRule = new FizzRule_1["default"];
 var buzzRule = new BuzzRule_1["default"];
 var fizzBuzzRule = new FizzBuzzRule_1["default"];
-var rules = [fizzRule, buzzRule, fizzBuzzRule];
+// Stricter rules must run first otherwise the for loop will pass iterate to the next number
+var rules = [fizzBuzzRule, fizzRule, buzzRule];
 var game = new GameController_1["default"](rules);
 var result = game.start(100);
 console.log(result.join(", "));
